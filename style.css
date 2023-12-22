@@ -1,103 +1,103 @@
-/* Base styles */
-body, h1, h2, p, a {
+/* Reset some basic elements */
+body, h1, p, a {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
 }
 
-/* Sidebar styles */
-.sidebar {
-    background: linear-gradient(to right, #6dd5ed, #2193b0); /* Blue gradient */
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #333;
     color: white;
-    padding: 20px;
-    width: 250px;
-    height: 100vh;
-    float: left;
-}
-
-.profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.social-links {
-    /* Social links styling */
-}
-
-.sidebar-nav {
-    list-style: none;
-}
-
-.sidebar-nav a {
-    color: white;
-    text-decoration: none;
-    display: block;
     padding: 10px 0;
 }
 
-.hire-me {
-    background-color: #fff;
-    color: #2193b0;
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Intro Section */
+.intro-section {
+    background: #444;
+    color: white;
+    padding: 40px 0;
     text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+    background-image: url('path-to-your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-.dark-mode-toggle {
-    margin-top: 20px;
-    cursor: pointer;
+.social-links {
+    margin-bottom: 20px;
 }
 
-/* Main content styles */
-.main-content {
-    margin-left: 250px;
-    padding: 20px;
-}
-
-.intro {
-    background: #f5f7fa;
-    padding: 20px;
-    text-align: center;
+.intro-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .btn {
-    background: #2193b0;
-    color: #fff;
-    padding: 10px 20px;
+    background: #e84545;
+    color: white;
+    padding: 10px 30px;
     text-decoration: none;
     display: inline-block;
-    margin: 10px 5px;
     border-radius: 5px;
+    margin-top: 20px;
     transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background: #6dd5ed;
+    background: #aa2e25;
 }
 
-.skills {
+.profile-photo {
     margin-top: 20px;
 }
 
-.skill-set {
-    /* Skill set styling */
+.profile-photo img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
 }
 
+/* Footer */
 footer {
+    background: #333;
+    color: white;
     text-align: center;
-    padding: 20px;
-    background: #f5f7fa;
+    padding: 10px 0;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .sidebar {
-        width: 100%;
-        height: auto;
+    .navigation {
+        display: none; /* Or switch to a hamburger menu */
     }
-    .main-content {
-        margin-left: 0;
+
+    .header-content, .intro-section {
+        flex-direction: column;
     }
 }
